@@ -1,0 +1,27 @@
+{
+    "appId": "com.s-sardor.electron-app",
+    "productName": "electron-app",
+    "extraResources": ["src/electron/preload.cjs", "src/assets/**"],
+    "files": [
+        "dist-react",
+        "src/electron"
+    ],
+    "win": {
+        "target": ["portable", "nsis"]
+    },
+    "nsis": {
+        "oneClick": false,
+        "perMachine": true,
+        "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": [
+            "AppImage",
+            "deb"
+        ],
+        "category": "Utility"
+    }
+}
